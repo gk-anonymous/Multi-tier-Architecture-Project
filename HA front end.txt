@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Awesome Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+        }
+
+        .animation {
+            animation: move 3s infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(50px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My Awesome Project</h1>
+        <p>Welcome to the future of cloud computing!</p>
+        <a href="#" class="button">Get Started</a>
+    </div>
+
+    <div class="container">
+        <h2>Features</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat, augue eget varius auctor, purus mi vehicula.</p>
+    </div>
+
+    <div class="container">
+        <h2>Our Amazing Team</h2>
+        <p class="animation">Meet the experts behind the project!</p>
+    </div>
+</body>
+</html>
